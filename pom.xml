@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.barchart.base</groupId>
+		<artifactId>barchart-archon</artifactId>
+		<version>2.5.6</version>
+		<relativePath />
+	</parent>
+
+	<groupId>com.barchart.log</groupId>
+	<artifactId>barchart-log</artifactId>
+	<version>0.0.0</version>
+	<packaging>pom</packaging>
+
+	<modules>
+
+		<module>log4j-aws-sns</module>
+		<module>log4j-aws-sns-pax</module>
+		<module>log4j-aws-sns-pax-feature</module>
+
+	</modules>
+
+	<build>
+
+		<!-- Layout project is not for deployment. -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>
