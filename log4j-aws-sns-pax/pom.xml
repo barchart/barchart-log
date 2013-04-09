@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>com.barchart.log</groupId>
 			<artifactId>barchart-log4j-aws-sns</artifactId>
-			<version>1.1.5-SNAPSHOT</version>
+			<version>1.1.5</version>
 			<optional>true</optional>
 		</dependency>
 
