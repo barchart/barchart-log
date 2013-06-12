@@ -103,8 +103,10 @@
 				<artifactId>karaf-maven-plugin</artifactId>
 				<version>3.0.0-build005</version>
 				<configuration>
-					<!-- Start before pax-logging. -->
+					<!-- Start bundles before pax-logging. -->
 					<startLevel>7</startLevel>
+					<!-- Start this feature.xml automatically. -->
+					<installMode>auto</installMode>
 				</configuration>
 				<executions>
 					<execution>
