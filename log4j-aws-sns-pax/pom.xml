@@ -20,7 +20,7 @@
 
 	<groupId>com.barchart.log</groupId>
 	<artifactId>barchart-log4j-aws-sns-pax</artifactId>
-	<version>1.1.6-SNAPSHOT</version>
+	<version>1.1.6</version>
 	<packaging>bundle</packaging>
 
 	<description>log4j appender for amazon sns; packaged as pax logging fragment</description>
@@ -29,7 +29,7 @@
 		<url>https://github.com/barchart/barchart-log</url>
 		<connection>scm:git:git://github.com/barchart/barchart-log.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/barchart/barchart-log.git</developerConnection>
-		<tag>master</tag>
+		<tag>barchart-log4j-aws-sns-pax-1.1.6</tag>
 	</scm>
 
 	<properties>
