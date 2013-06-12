@@ -63,14 +63,14 @@
 		<dependency>
 			<groupId>com.barchart.wrap</groupId>
 			<artifactId>barchart-wrap-apache-http-all</artifactId>
-			<version>[4.2.4,4.3)</version>
+			<version>[4.2.4,4.3-SNAPSHOT)</version>
 		</dependency>
 
 		<!-- AWS SDK converted to bundle. -->
 		<dependency>
 			<groupId>com.barchart.wrap</groupId>
 			<artifactId>barchart-wrap-aws-java-sdk</artifactId>
-			<version>[1.4.5,1.5)</version>
+			<version>[1.4.5,1.5-SNAPSHOT)</version>
 		</dependency>
 
 		<!-- Logger dependencies. -->
