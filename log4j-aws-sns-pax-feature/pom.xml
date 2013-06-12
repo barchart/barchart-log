@@ -1,20 +1,21 @@
 <!-- Copyright (C) 2010-2013 Andrei Pozolotin <Andrei.Pozolotin@gmail.com> 
 	All rights reserved. Licensed under the OSI BSD License. http://www.opensource.org/licenses/bsd-license.php -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>com.barchart.base</groupId>
 		<artifactId>barchart-archon</artifactId>
-		<version>2.5.6</version>
+		<version>2.5.11</version>
 		<relativePath />
 	</parent>
 
 	<groupId>com.barchart.log</groupId>
 	<artifactId>barchart-log4j-aws-sns-pax-feature</artifactId>
-	<version>1.1.6-SNAPSHOT</version>
-	<packaging>feature</packaging>
+	<version>1.2.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
 	<description>log4j appender for amazon sns; packaged as karaf startup feature</description>
 
@@ -38,25 +39,26 @@
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
-			<version>1.9.12</version>
+			<version>[1,2)</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.12</version>
+			<version>[1,2)</version>
 		</dependency>
 
 		<!-- Apache http dependencies. -->
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>com.springsource.org.apache.commons.logging</artifactId>
-			<version>1.1.1</version>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>[1.1,2)</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>com.springsource.org.apache.commons.codec</artifactId>
-			<version>1.6.0</version>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>[1.6,2)</version>
 		</dependency>
+
 
 		<!-- AWS SDK required Apache http. -->
 		<dependency>
@@ -69,7 +71,7 @@
 		<dependency>
 			<groupId>com.barchart.wrap</groupId>
 			<artifactId>barchart-wrap-aws-java-sdk</artifactId>
-			<version>1.4.1-build002</version>
+			<version>1.4.5-build000</version>
 		</dependency>
 
 		<!-- Logger dependencies. -->
@@ -92,56 +94,26 @@
 
 	</dependencies>
 
-	<repositories>
-		<repository>
-			<id>com.springsource.repository.bundles.release</id>
-			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
-			<url>http://repository.springsource.com/maven/bundles/release</url>
-		</repository>
-		<repository>
-			<id>com.springsource.repository.bundles.external</id>
-			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
-			<url>http://repository.springsource.com/maven/bundles/external</url>
-		</repository>
-		<repository>
-			<id>apache</id>
-			<url>https://repository.apache.org/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>apache</id>
-			<url>https://repository.apache.org/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
-
 	<build>
 
 		<plugins>
 
-			<!-- Start level: before pax logging. -->
+			<!-- Barchart custom plugin. -->
 			<plugin>
 				<groupId>org.apache.karaf.tooling</groupId>
 				<artifactId>karaf-maven-plugin</artifactId>
-				<version>3.0.0.RC1</version>
-				<extensions>true</extensions>
+				<version>3.0.0-build005</version>
 				<configuration>
 					<!-- Install before pax-logging. -->
 					<startLevel>7</startLevel>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>features-generate-semantic</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
