@@ -40,8 +40,7 @@
 
 	<dependencies>
 
-		<!-- MAIN -->
-
+		<!-- Use specific release version due to embedding. -->
 		<dependency>
 			<groupId>com.barchart.log</groupId>
 			<artifactId>barchart-log4j-aws-sns</artifactId>
