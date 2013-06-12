@@ -13,7 +13,7 @@
 
 	<groupId>com.barchart.log</groupId>
 	<artifactId>barchart-log4j-aws-sns-pax-feature</artifactId>
-	<version>1.2.2-SNAPSHOT</version>
+	<version>1.2.2</version>
 	<packaging>pom</packaging>
 
 	<description>karaf feature: log4j appender for amazon sns</description>
@@ -22,7 +22,7 @@
 		<url>https://github.com/barchart/barchart-log</url>
 		<connection>scm:git:git://github.com/barchart/barchart-log.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/barchart/barchart-log.git</developerConnection>
-		<tag>master</tag>
+		<tag>barchart-log4j-aws-sns-pax-feature-1.2.2</tag>
 	</scm>
 
 	<properties>
